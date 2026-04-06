@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>На печать — печати и штампы на заказ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/prices.css">
+ <link rel="stylesheet" href="css/popular.css">
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      
+      <div class="header__top">
+        <a class="header__logo" href="#top">
+          <img src="images/figma/logo.svg" width="295.12" height="113.88" alt="На печать — изготовление печатей">
+        </a>
+
+        <div class="header__top-right">
+          
+          <div class="header__top-right-main">
+
+            <div class="header__location">
+              <img class="header__metro-ico" src="images/figma/metro-m.svg" width="25" height="17" alt="">
+              <span class="header__metro-name">Сухаревская</span>
+              <a class="header__map" href="#" title="Карта проезда">Карта &gt;</a>
+            </div>
+            
+           <a class="header__phone" href="tel:+79268637525">+7&nbsp;(926)&nbsp;863-75-25</a>
+          
+          </div>
+
+
+          <a class="header__call-ico" href="tel:+79268637525" aria-label="Позвонить">
+            <img src="img/call.png" alt="" >
+            
+          </a>
+
+        </div>
+
+      </div>
+
+      <nav class="header__nav" aria-label="Основное меню">
+        <ul class="header__menu">
+          <li><a class="header__link header__link--active" href="#prices">ЦЕНЫ</a></li>
+          <li><a class="header__link" href="#order">СДЕЛАТЬ ЗАКАЗ</a></li>
+          <li><a class="header__link" href="#delivery">ДОСТАВКА</a></li>
+          <li><a class="header__link" href="#contacts">КОНТАКТЫ</a></li>
+          <li><a class="header__link" href="#opt">ОПТОВАЯ ПРОДАЖА</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+       <div class="hero__inner">
+
+          <div class="hero__quick-wrap">
+
+            <div class="quick-order">
+
+              <div class="quick-order__ring">
+                <img src="images/figma/quick-circle.svg" alt="" width="440" height="440">
+              </div>
+
+              <div class="quick-order__form">
+                <h2 class="quick-order__title">Быстрая заявка</h2>
+                    <div class="quick-order__fields">
+                      <label class="quick-order__label" for="quick-phone">Номер телефона:</label>
+                      <input class="quick-order__input" type="tel" id="quick-phone" name="quick-phone" placeholder="8 (ХХХ) ХХХ-ХХ-ХХ" autocomplete="tel">
+                    </div>
+                <button class="quick-order__btn" type="button">Перезвоните мне!</button>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="hero__main">
+
+            <div class="hero__features">
+            
+              <div class="hero__features-icons">
+                <div class="hero__feat-ico">
+                  <img class="hero__feat-pic" src="images/figma/benefit-1.svg" width="45" height="45" alt="">
+                </div>
+                <div class="hero__feat-ico">
+                  <img class="hero__feat-pic" src="images/figma/benefit-2.svg" width="45" height="45" alt="">
+                </div>
+                <div class="hero__feat-ico">
+                  <img class="hero__feat-pic" src="images/figma/benefit-3.svg" width="45" height="45" alt="">
+                </div>
+              </div>
+
+              <div class="hero__features-texts">
+                <span class="hero__feat-text">Заказ печатей<br>от 290р</span>
+                <span class="hero__feat-text">Изготовление<br>за 1 час</span>
+                <span class="hero__feat-text">Оперативная доставка<br>по Москве</span>
+              </div>
+
+             
+           <a href="#order" class="hero__cta">Заказать<br>сейчас!</a>
+              
+  
+          </div>
+
+        </div>
+
+    </div>
+
+ </section>
+        
+   
+<!-- ====================== СЕКЦИЯ ЦЕН ====================== -->
+<section class="prices" id="prices">
+  <div class="prices__inner">
+    
+    <!-- Заголовок секции -->
+    <h2 class="section-title">ЦЕНЫ</h2>
+
+    <!-- Сетка карточек (на мобильных — одна колонка) -->
+    <div class="prices__grid">
+
+      <!-- ====================== КАРТОЧКА 1 — ПЕЧАТИ ====================== -->
+      <article class="price-card">
+        
+        <!-- Шапка: иконка + название -->
+        <div class="price-card__head">
+          <img class="price-card__ico" src="img/печать.png" width="81" height="109" alt="Иконка печати">
+          <h3 class="price-card__name">ПЕЧАТИ</h3>
+        </div>
+
+        <!-- Контейнер с двумя колонками (1 день / 1-2 часа) -->
+        <div class="price-card__cols">
+          
+          <!-- Левая колонка: срок «1 ДЕНЬ» -->
+          <div class="price-card__col">
+            <p class="price-card__col-title">
+              <span class="price-card__dot"></span> 1 ДЕНЬ
+            </p>
+            <ul class="price-card__rows">
+              <!-- Строка: текст + пунктир (100px) + цена -->
+              <li>
+                <span class="price-card__lbl">НОВАЯ ПЕЧАТЬ</span>
+                <span class="price-card__dots price-card__dots--100"></span>
+                <span class="price-card__rub">290₽</span>
+              </li>
+              <!-- Строка: пунктир 55px -->
+              <li>
+                <span class="price-card__lbl">ПЕЧАТЬ ПО ОТТИСКУ</span>
+                <span class="price-card__dots price-card__dots--55"></span>
+                <span class="price-card__rub">390₽</span>
+              </li>
+              <!-- Строка: пунктир 107px -->
+              <li>
+                <span class="price-card__lbl">ФАКСИМИЛЕ</span>
+                <span class="price-card__dots price-card__dots--107"></span>
+                <span class="price-card__rub">590₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Вертикальный разделитель между колонками -->
+          <div class="price-card__sep" aria-hidden="true"></div>
+
+          <!-- Правая колонка: срок «1-2 ЧАСА» -->
+          <div class="price-card__col">
+            <p class="price-card__col-title">
+              <span class="price-card__dot"></span> 1-2 ЧАСА
+            </p>
+            <ul class="price-card__rows">
+              <li>
+                <span class="price-card__lbl">НОВАЯ ПЕЧАТЬ</span>
+                <span class="price-card__dots price-card__dots--100"></span>
+                <span class="price-card__rub">500₽</span>
+              </li>
+              <li>
+                <span class="price-card__lbl">ПЕЧАТЬ ПО ОТТИСКУ</span>
+                <span class="price-card__dots price-card__dots--55"></span>
+                <span class="price-card__rub">790₽</span>
+              </li>
+              <li>
+                <span class="price-card__lbl">ФАКСИМИЛЕ</span>
+                <span class="price-card__dots price-card__dots--107"></span>
+                <span class="price-card__rub">950₽</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- ====================== КАРТОЧКА 2 — ШТАМПЫ ====================== -->
+      <article class="price-card">
+        
+        <div class="price-card__head">
+          <img class="price-card__ico price-card__ico--stamp" src="images/figma/stamp-card.png" width="110" height="109" alt="Иконка штампа">
+          <h3 class="price-card__name">ШТАМПЫ</h3>
+        </div>
+
+        <div class="price-card__cols">
+          
+          <!-- Левая колонка: 1 ДЕНЬ -->
+          <div class="price-card__col">
+            <p class="price-card__col-title">
+              <span class="price-card__dot"></span> 1 ДЕНЬ
+            </p>
+            <ul class="price-card__rows">
+              <li>
+                <span class="price-card__lbl">20×40 мм</span>
+                <span class="price-card__dots price-card__dots--100"></span>
+                <span class="price-card__rub">290₽</span>
+              </li>
+              <li>
+                <span class="price-card__lbl">30×50 мм</span>
+                <span class="price-card__dots price-card__dots--55"></span>
+                <span class="price-card__rub">400₽</span>
+              </li>
+              <li>
+                <span class="price-card__lbl">60×100 мм</span>
+                <span class="price-card__dots price-card__dots--107"></span>
+                <span class="price-card__rub">600₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card__sep" aria-hidden="true"></div>
+
+          <!-- Правая колонка: 1-2 ЧАСА -->
+          <div class="price-card__col">
+            <p class="price-card__col-title">
+              <span class="price-card__dot"></span> 1-2 ЧАСА
+            </p>
+            <ul class="price-card__rows">
+              <li>
+                <span class="price-card__lbl">20×40 мм</span>
+                <span class="price-card__dots price-card__dots--100"></span>
+                <span class="price-card__rub">500₽</span>
+              </li>
+              <li>
+                <span class="price-card__lbl">30×50 мм</span>
+                <span class="price-card__dots price-card__dots--55"></span>
+                <span class="price-card__rub">790₽</span>
+              </li>
+              <li>
+                <span class="price-card__lbl">60×100 мм</span>
+                <span class="price-card__dots price-card__dots--107"></span>
+                <span class="price-card__rub">1200₽</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    <section class="popular" id="popular">
+      <div class="popular__bg-wrap" aria-hidden="true">
+        <div class="popular__bg1"></div>
+      </div>
+      <div class="popular__head">
+        <h2 class="section-title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+      </div>
+      <div class="popular__cards">
+        <div class="popular__grid">
+          <article class="popular-card popular-card--1">
+            <div class="popular-card__panel">
+              <h3 class="popular-card__title">Карманная<br>печать</h3>
+              <p class="popular-card__price">550р/ новая</p>
+              <p class="popular-card__price">750р/ по оттиску</p>
+            </div>
+          </article>
+          <article class="popular-card popular-card--2">
+            <div class="popular-card__panel">
+              <h3 class="popular-card__title">Автоматическая<br>печать</h3>
+              <p class="popular-card__price">550р/ новая</p>
+              <p class="popular-card__price">750р/ по оттиску</p>
+            </div>
+          </article>
+          <article class="popular-card popular-card--3">
+            <div class="popular-card__panel">
+              <h3 class="popular-card__title">Карманная<br>печать</h3>
+              <p class="popular-card__price">550р/ новая</p>
+              <p class="popular-card__price">750р/ по оттиску</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="popular__bg2-wrap" aria-hidden="true">
+        <div class="popular__bg2"></div>
+      </div>
+    </section>
+
+
+    
+
+    <section class="order" id="order">
+      <div class="order__head">
+        <h2 class="section-title">ОНЛАЙН-ЗАКАЗ</h2>
+      </div>
+      <div class="order__layout">
+        <aside class="order__aside">
+          <div class="order-summary">
+            <p class="order-summary__label">Ваш заказ:</p>
+            <p class="order-summary__lines">Новая печать<br>Оснастка: ручная<br>Кол-во: <span class="order-summary__qty-wrap"><button type="button" class="order-summary__step" aria-label="Минус">−</button> <span class="order-summary__qty">1</span> <button type="button" class="order-summary__step" aria-label="Плюс">+</button></span></p>
+            <p class="order-summary__label order-summary__label--total">Итого:</p>
+            <p class="order-summary__value">390₽</p>
+          </div>
+        </aside>
+        <form class="order-form" action="#" method="post">
+          <p class="order-form__heading">Выберите вид печати</p>
+          <div class="order-form__cards order-form__cards--types">
+            <label class="pick-card">
+              <input type="radio" name="seal-type" value="seal" checked>
+              <span class="pick-card__box">
+                <span class="pick-card__img-wrap"><img src="images/figma/type-seal.png" alt=""></span>
+                <span class="pick-card__radio"></span>
+                <span class="pick-card__text">Печать</span>
+              </span>
+            </label>
+            <label class="pick-card">
+              <input type="radio" name="seal-type" value="stamp">
+              <span class="pick-card__box">
+                <span class="pick-card__img-wrap"><img src="images/figma/type-stamp.png" alt=""></span>
+                <span class="pick-card__radio"></span>
+                <span class="pick-card__text">Штамп</span>
+              </span>
+            </label>
+            <label class="pick-card">
+              <input type="radio" name="seal-type" value="facsimile">
+              <span class="pick-card__box">
+                <span class="pick-card__img-wrap"><img src="images/figma/type-facsimile.png" alt=""></span>
+                <span class="pick-card__radio"></span>
+                <span class="pick-card__text">Факсимиле</span>
+              </span>
+            </label>
+          </div>
+
+          <p class="order-form__heading">Выберите тип</p>
+          <div class="order-form__cards order-form__cards--duo">
+            <label class="pick-card pick-card--type">
+              <input type="radio" name="layout" value="new" checked>
+              <span class="pick-card__box pick-card__box--tall">
+                <img class="pick-card__corner" src="images/figma/card-corner.svg" width="31" height="31" alt="">
+                <span class="pick-card__img-wrap pick-card__img-wrap--lg"><img src="images/figma/pick-new.png" alt=""></span>
+                <span class="pick-card__radio"></span>
+                <span class="pick-card__text">Новая печать</span>
+              </span>
+            </label>
+            <label class="pick-card pick-card--type">
+              <input type="radio" name="layout" value="impression">
+              <span class="pick-card__box pick-card__box--tall">
+                <img class="pick-card__corner" src="images/figma/card-corner.svg" width="31" height="31" alt="">
+                <span class="pick-card__img-wrap pick-card__img-wrap--lg"><img src="images/figma/pick-impression.png" alt=""></span>
+                <span class="pick-card__radio"></span>
+                <span class="pick-card__text">По оттиску</span>
+              </span>
+            </label>
+          </div>
+
+          <p class="order-form__heading">Срок изготовления</p>
+          <div class="order-form__radios order-form__radios--pill">
+            <label class="radio-pill"><input type="radio" name="deadline" value="tomorrow" checked><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> На завтра</span></label>
+            <label class="radio-pill"><input type="radio" name="deadline" value="urgent"><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> Срочно <span class="radio-pill__sub">(1-2часа)</span></span></label>
+          </div>
+
+          <p class="order-form__heading">Количество</p>
+          <div class="qty-field">
+            <button type="button" class="qty-field__btn" aria-label="Минус">−</button>
+            <span class="qty-field__val">1</span>
+            <button type="button" class="qty-field__btn" aria-label="Плюс">+</button>
+            <input type="hidden" name="qty" value="1">
+          </div>
+
+          <p class="order-form__heading">Тип организации</p>
+          <div class="order-form__cards order-form__cards--ownership">
+            <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="ip" checked><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ИП</span></label>
+            <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="ooo"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ООО</span></label>
+            <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="zao"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ЗАО</span></label>
+            <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="oao"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ОАО</span></label>
+            <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="med"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> Врачебная</span></label>
+            <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="other"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> Другое</span></label>
+          </div>
+
+          <div class="order-form__fields order-form__fields--quad">
+            <label class="field">
+              <span class="field__label">Наименование организации</span>
+              <input class="field__input" type="text" name="org" placeholder="Например, ИП Константин Константинопольский" autocomplete="organization">
+            </label>
+            <label class="field">
+              <span class="field__label">Город</span>
+              <input class="field__input" type="text" name="city" placeholder="Москва" autocomplete="address-level2">
+            </label>
+            <label class="field">
+              <span class="field__label">ОГРН</span>
+              <input class="field__input" type="text" name="ogrn" placeholder="123456789876543" inputmode="numeric">
+            </label>
+            <label class="field">
+              <span class="field__label">ИНН</span>
+              <input class="field__input" type="text" name="inn" placeholder="12345678986765" inputmode="numeric">
+            </label>
+          </div>
+
+          <p class="order-form__heading">Выберите макет</p>
+          <div class="template-grid">
+            <label class="template-item"><input type="radio" name="template" value="t1" checked><span class="template-item__visual"><img src="images/figma/tpl-1.png" alt=""></span><span class="template-item__cap">ИП 0001</span></label>
+            <label class="template-item"><input type="radio" name="template" value="t2"><span class="template-item__visual"><img src="images/figma/tpl-2.png" alt=""></span><span class="template-item__cap">ИП 0002</span></label>
+            <label class="template-item"><input type="radio" name="template" value="t3"><span class="template-item__visual"><img src="images/figma/tpl-3.png" alt=""></span><span class="template-item__cap">ИП 0003</span></label>
+            <label class="template-item"><input type="radio" name="template" value="t4"><span class="template-item__visual"><img src="images/figma/tpl-4.png" alt=""></span><span class="template-item__cap">ИП 0004</span></label>
+            <label class="template-item"><input type="radio" name="template" value="t5"><span class="template-item__visual"><img src="images/figma/tpl-5.png" alt=""></span><span class="template-item__cap">ИП 0005</span></label>
+            <label class="template-item"><input type="radio" name="template" value="t6"><span class="template-item__visual"><img src="images/figma/tpl-6.png" alt=""></span><span class="template-item__cap">ИП 0006</span></label>
+            <label class="template-item"><input type="radio" name="template" value="t7"><span class="template-item__visual"><img src="images/figma/tpl-7.png" alt=""></span><span class="template-item__cap">ИП 0007</span></label>
+            <label class="template-item"><input type="radio" name="template" value="t8"><span class="template-item__visual"><img src="images/figma/tpl-8.png" alt=""></span><span class="template-item__cap">ИП 0008</span></label>
+            <label class="template-item"><input type="radio" name="template" value="t9"><span class="template-item__visual"><img src="images/figma/tpl-9.png" alt=""></span><span class="template-item__cap">ИП 0009</span></label>
+          </div>
+
+          <p class="order-form__heading">Выберите оснастку</p>
+          <div class="order-form__cards order-form__cards--mounts">
+            <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="1" checked><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Ручная</span></span></label>
+            <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="2"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Автомат</span></span></label>
+            <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="3"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Карманная</span></span></label>
+            <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="4"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">По оттиску</span></span></label>
+            <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="5"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Корпусная</span></span></label>
+            <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="6"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Для штампа</span></span></label>
+          </div>
+
+          <p class="order-form__heading" id="delivery">Способ получения</p>
+          <div class="order-form__radios order-form__radios--pill">
+            <label class="radio-pill"><input type="radio" name="delivery" value="pickup" checked><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> Самовывоз</span></label>
+            <label class="radio-pill"><input type="radio" name="delivery" value="courier"><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> Доставка</span></label>
+          </div>
+
+          <p class="order-form__heading">Адрес доставки</p>
+          <label class="field field--full">
+            <input class="field__input field__input--line" type="text" name="address" placeholder="Например, Панкратьевский переулок 41к1" autocomplete="address-line1">
+          </label>
+
+          <p class="order-form__heading">Комментарий</p>
+          <label class="field field--full">
+            <span class="field__area-wrap">
+              <img class="field__area-bg" src="images/figma/field-comment.svg" alt="">
+              <textarea class="field__textarea" name="comment" rows="5" placeholder="Если у вас есть уточнение к заказу, либо дополнительный заказ, напишите его сюда."></textarea>
+            </span>
+          </label>
+
+          <div class="order-form__footer">
+            <button class="order-form__submit" type="submit">Оформить заказ</button>
+            <p class="order-form__note">Оплата производится при получении заказа.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="footer__deco" aria-hidden="true"><img src="images/figma/footer-deco.svg" alt=""></div>
+    <div class="footer__inner">
+      <span id="opt" class="footer__opt-anchor"></span>
+      <a class="footer__logo" href="#top">
+        <img src="img/pod.png" width="516" height="130" alt="На печать — изготовление печатей и штампов">
+      </a>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <ul class="footer__menu">
+          <li><a class="footer__link" href="#prices">ЦЕНЫ</a></li>
+          <li><a class="footer__link" href="#order">СДЕЛАТЬ ЗАКАЗ</a></li>
+          <li><a class="footer__link" href="#delivery">ДОСТАВКА</a></li>
+          <li><a class="footer__link" href="#contacts">КОНТАКТЫ</a></li>
+          <li><a class="footer__link" href="#opt">ОПТОВАЯ ПРОДАЖА</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

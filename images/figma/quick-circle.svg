@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 2" opacity="0.8">
+<circle id="Ellipse 2" cx="220" cy="220" r="205.263" fill="var(--fill-0, white)" fill-opacity="0.7"/>
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M440 220C440 341.503 341.503 440 220 440C98.4974 440 0 341.503 0 220C0 98.4974 98.4974 0 220 0C341.503 0 440 98.4974 440 220ZM220 430.526C336.27 430.526 430.526 336.27 430.526 220C430.526 103.73 336.27 9.47368 220 9.47368C103.73 9.47368 9.47368 103.73 9.47368 220C9.47368 336.27 103.73 430.526 220 430.526Z" fill="var(--fill-0, white)" fill-opacity="0.7"/>
+</g>
+</svg>

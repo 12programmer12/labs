@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="624" viewBox="0 0 1440 624" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="wood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b6f4a"/>
+      <stop offset="50%" stop-color="#6b4f32"/>
+      <stop offset="100%" stop-color="#4a3520"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="624" fill="url(#wood)"/>
+  <g opacity="0.15" stroke="#fff" stroke-width="1">
+    <path d="M0 120h1440M0 240h1440M0 360h1440M0 480h1440"/>
+  </g>
+  <ellipse cx="200" cy="400" rx="80" ry="40" fill="#000" opacity="0.08"/>
+  <ellipse cx="1100" cy="200" rx="120" ry="60" fill="#000" opacity="0.06"/>
+</svg>

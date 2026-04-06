@@ -1,0 +1,162 @@
+
+.popular {
+  position: relative;
+  min-height: 39rem;
+  padding: 0 0 4rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.popular__bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.popular__bg2-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.popular__bg1 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--bg-page);
+  background-image: url("../images/figma/popular-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.popular__bg2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(calc(-50% + 2.5rem), -50%);
+  width: min(100%, 97.215125rem);
+  height: 72.6726875rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  background-image: url("../images/figma/popular-bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+@media (max-width: 52rem) {
+  .popular__bg2 {
+    width: min(calc(100% - 1.5rem), 114.215125rem);
+    height: auto;
+    aspect-ratio: 794.54 / 623.81;
+  }
+}
+
+.popular__head {
+  position: relative;
+  z-index: 3;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1.5rem clamp(1rem, 6vw, 9.25rem) 0;
+}
+
+.popular__cards {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 6vw, 9.25rem);
+}
+
+.popular__grid {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  align-items: end;
+  justify-content: start;
+  gap: 0;
+  max-width: 89.875rem;
+  margin: 0 auto;
+  padding-left: min(12.19rem, 8vw);
+  box-sizing: border-box;
+}
+
+.popular-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 18.325rem;
+  min-height: 24rem;
+  padding: 0 0.35rem;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.popular-card--1 {
+  margin-right: 15rem;
+  transform: translate(-8rem, -1rem);
+}
+
+.popular-card--2 {
+  min-height: 18rem;
+  transform: translate(-7px, -10.5rem);
+}
+
+.popular-card--3 {
+  margin-left: -4rem;
+  transform: translateY(4rem);
+}
+
+.popular-card__panel {
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18.325rem;
+  height: 9.43125rem;
+  max-width: 100%;
+  margin-top: 0;
+  padding: 0.4rem 0.55rem 0.4rem 22px;
+  background: #fff;
+  border-radius: 0.875rem;
+  box-shadow: var(--shadow-popular);
+  text-align: left;
+}
+
+.popular-card__panel .popular-card__title,
+.popular-card__panel .popular-card__price {
+  width: 100%;
+  text-align: left;
+}
+
+.popular-card__title {
+  margin: 0 0 0.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #0d386b;
+}
+
+.popular-card__price {
+  margin: 0.1rem 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #979797;
+}
+
