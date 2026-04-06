@@ -274,44 +274,55 @@
 
 
 
+          <section class="popular" id="popular">
+            <!-- Фон секции -->
+            <div class="popular__bg" aria-hidden="true"></div>
 
-    <section class="popular" id="popular">
-      <div class="popular__bg-wrap" aria-hidden="true">
-        <div class="popular__bg1"></div>
-      </div>
-      <div class="popular__head">
-        <h2 class="section-title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
-      </div>
-      <div class="popular__cards">
-        <div class="popular__grid">
-          <article class="popular-card popular-card--1">
-            <div class="popular-card__panel">
-              <h3 class="popular-card__title">Карманная<br>печать</h3>
-              <p class="popular-card__price">550р/ новая</p>
-              <p class="popular-card__price">750р/ по оттиску</p>
-            </div>
-          </article>
-          <article class="popular-card popular-card--2">
-            <div class="popular-card__panel">
-              <h3 class="popular-card__title">Автоматическая<br>печать</h3>
-              <p class="popular-card__price">550р/ новая</p>
-              <p class="popular-card__price">750р/ по оттиску</p>
-            </div>
-          </article>
-          <article class="popular-card popular-card--3">
-            <div class="popular-card__panel">
-              <h3 class="popular-card__title">Карманная<br>печать</h3>
-              <p class="popular-card__price">550р/ новая</p>
-              <p class="popular-card__price">750р/ по оттиску</p>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="popular__bg2-wrap" aria-hidden="true">
-        <div class="popular__bg2"></div>
-      </div>
-    </section>
+            <div class="popular__container">
+              
+                <!-- Заголовок (локальный, не трогает другие секции) -->
+                <header class="popular__header">
+                  <h2 class="popular__title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+                </header>
 
+              <!-- Основная сетка -->
+              <div class="popular__grid">
+                
+                    <!-- Левая карточка -->
+                    <div class="popular__col-left">
+
+                      <article class="popular-card">
+                        <h3 class="popular-card__title">Карманная печать</h3>
+                        <p class="popular-card__price">550₽ / новая</p>
+                        <p class="popular-card__price">750₽ / по оттиску</p>
+                      </article>
+                      
+                    </div>
+
+                    <!-- Центральное изображение -->
+                    <div class="popular__col-center">
+                      <img class="popular__img" src="img/popular-main.png" alt="Печати" width="450" height="450">
+                    </div>
+
+                    <!-- Правые карточки -->
+                    <div class="popular__col-right">
+
+                        <article class="popular-card">
+                          <h3 class="popular-card__title">Автоматическая печать</h3>
+                          <p class="popular-card__price">550₽ / новая</p>
+                          <p class="popular-card__price">750₽ / по оттиску</p>
+                        </article>
+
+                        <article class="popular-card">
+                          <h3 class="popular-card__title">Карманная печать</h3>
+                          <p class="popular-card__price">550₽ / новая</p>
+                          <p class="popular-card__price">750₽ / по оттиску</p>
+                        </article>
+                    </div>
+
+              </div>
+            </div>
+          </section>
 
     
 
