@@ -342,76 +342,142 @@
                 <aside class="order__aside">
                   <div class="order-summary">
                     <p class="order-summary__label">Ваш заказ:</p>
-                    <!-- Динамический состав заказа + управление количеством -->
+                    
                     <p class="order-summary__lines">Новая печать<br>Оснастка: ручная<br>Кол-во: <span class="order-summary__qty-wrap"><button type="button" class="order-summary__step" aria-label="Минус">−</button> <span class="order-summary__qty">1</span> <button type="button" class="order-summary__step" aria-label="Плюс">+</button></span></p>
                     <p class="order-summary__label--total">Итого:</p>
                     <p class="order-summary__value">390₽</p>
                   </div>
                 </aside>
               
-                 <!-- 🔹 ПРАВАЯ КОЛОНКА: Основная форма с выбором параметров -->
+                 <!-- ПРАВАЯ КОЛОНКА: Основная форма с выбором параметров -->
                 <form class="order-form" action="#" method="post">
                   
                     <!-- Блок 1: Выбор вида изделия (3 карточки) -->
                     <p class="order-form__heading">Выберите вид печати</p>
-                    <div class="order-form__cards order-form__cards--types">
-                      <label class="pick-card">
-                        <input type="radio" name="seal-type" value="seal" checked>
-                        <span class="pick-card__box">
-                          <span class="pick-card__img-wrap"><img src="images/figma/type-seal.png" alt=""></span>
-                          <span class="pick-card__radio"></span>
-                          <span class="pick-card__text">Печать</span>
-                        </span>
-                      </label>
-                      <label class="pick-card">
-                        <input type="radio" name="seal-type" value="stamp">
-                        <span class="pick-card__box">
-                          <span class="pick-card__img-wrap"><img src="images/figma/type-stamp.png" alt=""></span>
-                          <span class="pick-card__radio"></span>
-                          <span class="pick-card__text">Штамп</span>
-                        </span>
-                      </label>
-                      <label class="pick-card">
-                        <input type="radio" name="seal-type" value="facsimile">
-                        <span class="pick-card__box">
-                          <span class="pick-card__img-wrap"><img src="images/figma/type-facsimile.png" alt=""></span>
-                          <span class="pick-card__radio"></span>
-                          <span class="pick-card__text">Факсимиле</span>
-                        </span>
-                      </label>
+
+                   <div class="order-form__cards">
+
+                        <label class="pick-card">
+
+                            <input type="radio" name="seal-type" value="seal" checked>
+                            <span class="pick-card__box">
+                              
+                              <span class="pick-card__img-wrap"><img src="images/figma/type-seal.png" alt="" width="170" height="150"> </span>
+                                
+                              <span class="pick-card__footer">
+                                <span class="pick-card__radio"></span>
+                                <span class="pick-card__text">Печать</span>
+                              </span>
+
+                            </span>
+
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="seal-type" value="stamp">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/type-stamp.png" width="200" height="140" alt=""></span>
+                             
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">Штамп</span>
+                            </span>
+                          </span>
+
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="seal-type" value="facsimile">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/type-facsimile.png" width="130" height="140"alt=""></span>
+                             
+                            <span class="pick-card__footer">
+                                <span class="pick-card__radio"></span>
+                                <span class="pick-card__text">Факсимиле</span>
+                              </span>
+                          </span>
+
+                        </label>
+
                     </div>
+
 
                   <!-- Блок 2: Выбор типа изготовления (2 высокие карточки) -->
                   <p class="order-form__heading">Выберите тип</p>
-                  <div class="order-form__cards order-form__cards--duo">
-                    <label class="pick-card pick-card--type">
+
+                  <div class="order-form__cards ">
+
+                    <label class="pick-card">
                       <input type="radio" name="layout" value="new" checked>
-                      <span class="pick-card__box pick-card__box--tall">
-                        <img class="pick-card__corner" src="images/figma/card-corner.svg" width="31" height="31" alt="">
-                        <span class="pick-card__img-wrap pick-card__img-wrap--lg"><img src="images/figma/pick-new.png" alt=""></span>
-                        <span class="pick-card__radio"></span>
-                        <span class="pick-card__text">Новая печать</span>
+                      <span class="pick-card__box ">
+                        
+                        <span class="pick-card__img-wrap "><img src="images/figma/pick-new.png" width="170" height="150"alt=""></span>
+                       
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">Новая печать</span>
+                            </span>
                       </span>
+
                     </label>
-                    <label class="pick-card pick-card--type">
+
+                    <label class="pick-card">
+
                       <input type="radio" name="layout" value="impression">
                       <span class="pick-card__box pick-card__box--tall">
-                        <img class="pick-card__corner" src="images/figma/card-corner.svg" width="31" height="31" alt="">
+                     
+                      
                         <span class="pick-card__img-wrap pick-card__img-wrap--lg"><img src="images/figma/pick-impression.png" alt=""></span>
-                        <span class="pick-card__radio"></span>
-                        <span class="pick-card__text">По оттиску</span>
+                            
+                        <span class="pick-card__footer">
+                           <span class="pick-card__radio"></span>
+                           <span class="pick-card__text">По оттиску</span>
+                          </span>
+
                       </span>
+            
+
+              
                     </label>
                   </div>
 
+
+
                   <!-- Блок 3: Срок изготовления (горизонтальные pill-переключатели) -->
+                 <div class="order-form__block">
                   <p class="order-form__heading">Срок изготовления</p>
+
                   <div class="order-form__radios order-form__radios--pill">
-                    <label class="radio-pill"><input type="radio" name="deadline" value="tomorrow" checked><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> На завтра</span></label>
-                    <label class="radio-pill"><input type="radio" name="deadline" value="urgent"><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> Срочно <span class="radio-pill__sub">(1-2часа)</span></span></label>
+
+                    <label class="radio-pill">
+                      
+                        <input type="radio" name="deadline" value="tomorrow" checked>
+                        <span class="radio-pill__ui">
+                          <span class="radio-pill__ico" aria-hidden="true"></span>
+                          На завтра 
+                        </span>
+
+                    </label>
+
+                      <label class="radio-pill">
+
+                        <input type="radio" name="deadline" value="urgent">
+                        <span class="radio-pill__ui">
+                          <span class="radio-pill__ico" aria-hidden="true"></span>
+                          Срочно
+                          <span class="radio-pill__sub">(1-2часа)</span>
+                        </span>
+
+                      </label>
+
                   </div>
 
+                </div>
+
+
+
                   <!-- Блок 4: Количество (кастомный счётчик + скрытый input для отправки) -->
+                  <div class="order-form__block">
                   <p class="order-form__heading">Количество</p>
                   <div class="qty-field">
                     <button type="button" class="qty-field__btn" aria-label="Минус">−</button>
@@ -419,16 +485,20 @@
                     <button type="button" class="qty-field__btn" aria-label="Плюс">+</button>
                     <input type="hidden" name="qty" value="1">
                   </div>
+                 </div>
 
+
+                <div class="order-form__block">
                 <!-- Блок 5: Тип организации (6 компактных кнопок-таблеток) -->
                 <p class="order-form__heading">Тип организации</p>
-                <div class="order-form__cards order-form__cards--ownership">
+                <div class="order-form__cards">
                   <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="ip" checked><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ИП</span></label>
                   <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="ooo"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ООО</span></label>
                   <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="zao"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ЗАО</span></label>
                   <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="oao"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ОАО</span></label>
                   <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="med"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> Врачебная</span></label>
                   <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="other"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> Другое</span></label>
+                </div>
                 </div>
 
                 <!-- Блок 6: Реквизиты организации (CSS Grid сетка 2×2) -->
