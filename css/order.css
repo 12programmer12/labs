@@ -154,7 +154,7 @@
   padding: 35px 1rem 13px 14.8px; 
   
   background: #fff;
-  border: 1px solid #bd1919;
+  border: 1px solid #000000;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
@@ -209,7 +209,8 @@
 }
 
 .pick-card input:checked + .pick-card__box .pick-card__radio,
-.radio-pill input:checked + .radio-pill__ui .radio-pill__ico {
+.radio-pill input:checked + .radio-pill__ui .radio-pill__ico 
+{
   border-color: #0d386b;
   background: #0d386b;
   box-shadow: inset 0 0 0 3px #fff;
@@ -219,65 +220,7 @@
   border-color: #b0c4d4;
 }
 
-
 /* ====================== ТИП ОРГАНИЗАЦИИ — ПИЛЛЫ (ИСПРАВЛЕНИЕ) ====================== */
-.order-form__cards:has(.pick-card--org) {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 0;
-  margin-bottom: 2rem;
-}
-
-.pick-card--org {
-  display: inline-block;
-}
-
-.pick-card--org input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.pick-card__box--org {
-    display: inline-flex !important;
-  flex-direction: row !important;  
-  
-  align-items: center;
-  justify-content: flex-start;
-  
-  height: 45px;
-   padding: 0px  14px 11px;              /* 0 = верх/низ, 14px = лево/право */
-  gap: 7px;                     /* Расстояние между кружком и текстом */
-  width: max-content; /* Контейнер сжимается строго под иконку + текст */
-  background: var(--pill-bg);
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  font-size: 1.125rem;
-  line-height: 1; /* Жёстко фиксирует высоту строки, убирает «вылет» текста */
-  color: var(--text);
-  white-space: nowrap; /* Запрещает тексту переноситься или выходить за границы */
-  box-sizing: border-box;
-  cursor: pointer;
-  transition: box-shadow var(--transition);
-}
-
-.pick-card--org input:checked + .pick-card__box--org {
-  box-shadow: 0 0 0 2px #0d386b;
-  background: #f8f8f8;
-}
-
-.pick-card__org-ico {
-  display: inline-block;
-  width: 1.4rem;
-  height: 1.4rem;
-  flex-shrink: 0;
-  background: url("../images/figma/radio-check.svg") center / contain no-repeat;
-  opacity: 0.65;
-}
 
 .radio-pill__sub {
   margin-left: 3px;      /* внешний отступ слева */
@@ -286,13 +229,32 @@
   color: #bcbcbc;           /* серый цвет, как у label */
 }
 
-
-
-
 /* ====================== ОСНАСТКА ====================== */
 .order-form__cards--mounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px 13px;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* или ваше исходное значение */
+}
+
+/* Адаптируем внутренние карточки под ячейки грида */
+
+.order-form__cards--mounts .pick-card {
+ height: 230px;
+  box-sizing: border-box; /* Гарантирует, что padding не прибавится к высоте */          /* Центрируем саму карточку внутри ячейки, если она уже 230px */
+}
+
+/* Настройка отступов ТОЛЬКО для картинок в блоке Оснастка */
+.order-form__cards--mounts .pick-card__img-wrap {
+  /* Порядок значений: ВЕРХ ПРАВО НИЗ ЛЕВО */
+  padding: 9px 21px 15px 15px; 
+  
+  /* Гарантируем, что картинка остается по центру внутри этих отступов */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Чтобы padding не увеличивал размер блока сверх заданного */
 }
 
 
@@ -314,8 +276,8 @@
 /* ====================== PILL-ПЕРЕКЛЮЧАТЕЛИ (Срок изготовления) ====================== */
 .order-form__radios--pill {
   display: flex;
-  flex-wrap: wrap;
-  gap: 33px;
+  flex-wrap: nowrap;
+  gap: 14px;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -353,13 +315,11 @@
   background: #f8f8f8;
 }
 
-
-
 /* ====================== ПОЛЕ КОЛИЧЕСТВА ====================== */
 .qty-field {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.4rem;
   padding: 11px 15px;
   background: var(--pill-bg);
   border-radius: 8px;
@@ -368,39 +328,49 @@
 }
 
 .qty-field__btn {
-  width: 2.5rem;
-  height: 2.5rem;
+  /* Размеры круга */
+  width: 22px;
+  height: 22px;
+  
+  /* Центрирование знака внутри круга */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Визуал */
+  background-color: #D4D4D4; /* Серый фон, как в макете */
+  border: none;              /* Убираем стандартную рамку */
+  border-radius: 50%;        /* Делаем идеальный круг */
+  
+  /* Текст (знак) */
   font-size: 1.25rem;
   font-weight: 900;
-  color: #686868;
+  line-height: 1;
+  color: #686868;            /* Цвет самого знака минус/плюс */
+  
+  /* Поведение */
   cursor: pointer;
-  background: transparent;
-  border: none;
-  border-radius: 4px;
-  transition: background-color var(--transition);
+  padding: 0;                /* Убираем внутренние отступы, чтобы знак был по центру */
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
+/* Эффект при наведении */
 .qty-field__btn:hover {
-  background: #e8e8e8;
+  background-color: #C0C0C0; /* Чуть темнее при наведении */
 }
 
 .qty-field__val {
-  max-height: 45px;
-  max-width: 136px;
-  font-size: 0.8rem;
+  font-size: 1.125rem;
   text-align: center;
   font-weight: 500;
   border-color: #bd1919;
-  padding-bottom: 6.26px;
 }
 
 /* ====================== ТЕКСТОВЫЕ ПОЛЯ ====================== */
 .order-form__fields--quad {
-    
-    margin-top: -35px; 
   display: grid;
   grid-template-columns: 465px 170px;
-  gap: 1rem 1.5rem;
+  gap: 31px 1.5rem;
   margin-bottom: 98.77px;
   padding-left: 0px;
 }
@@ -408,7 +378,7 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 22px;
 }
 
 .field--full {
@@ -421,11 +391,28 @@
   color: var(--muted);
 }
 
+.ogrn-inn-row {
+  display: flex;
+  gap: 14px;
+  grid-column: span 2;  /* занимает обе колонки в гриде */
+}
+
+/* Ширина полей по умолчанию */
+.ogrn-inn-row .field:first-child {
+  width: 224px;
+  flex-shrink: 0;  /* запрещаем сжатие */
+}
+
+.ogrn-inn-row .field:last-child {
+  width: 192px;
+  flex-shrink: 0;
+}
+
 .field__input {
   width: 100%;
   height: 2.75rem;
-  padding: 0 0.75rem;
-  font-size: 1.125rem;
+  padding: 0 22px;
+  font-size: 1.145rem;
   color: var(--text);
   background: #f8f8f8;
   border: none;
@@ -485,66 +472,15 @@
 /* ====================== СЕТКА ШАБЛОНОВ ====================== */
 .template-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  max-width: 52rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(3, 230px); /* Ровно под размер .pick-card__box */
+  gap: 12.85px 13px;                       /* Совпадает с gap у order-form__cards */
+  justify-content: center;                 /* Центрирует сетку в форме */
+  margin-bottom: 103px;
 }
 
-.template-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
-
-.template-item input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.template-item__visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 14rem;
-  padding: 0.5rem;
-  background: #fdfdfd;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-pick);
-  transition: box-shadow var(--transition);
-  box-sizing: border-box;
-}
-
-.template-item__visual img {
-  width: 9.25rem;
-  height: 9.25rem;
-  object-fit: contain;
-}
-
-.template-item__cap {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 1.125rem;
-  text-align: center;
-}
-
-.template-item:has(input:checked) .template-item__visual {
-  box-shadow: 0 0 0 3px var(--green-quick);
-}
-
-.template-item:hover .template-item__visual {
-  box-shadow: var(--shadow-pick);
+.template-grid .pick-card  {
+  height: 230px;
+  box-sizing: border-box; /* Гарантирует, что padding не прибавится к высоте */
 }
 
 /* ====================== ОБЩИЙ БЛОК ====================== */
@@ -552,12 +488,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 2.1rem;
+  margin-bottom: 30px;
+}
+
+.order-form__block.order-form__block--qty {
+  margin-bottom: 34.85px;
 }
 
 .order-form__block .order-form__heading {
   margin: 0 0 22px 0;
   text-align: left;
+}
+
+.order-form__block .order-form__heading--org {
+  margin: 0 0 20px 0;
 }
 
 /* ====================== ФУТЕР ФОРМЫ ====================== */

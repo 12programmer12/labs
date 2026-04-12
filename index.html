@@ -477,30 +477,81 @@
 
 
                   <!-- Блок 4: Количество (кастомный счётчик + скрытый input для отправки) -->
-                  <div class="order-form__block">
+                <div class="order-form__block ">
                   <p class="order-form__heading">Количество</p>
+
                   <div class="qty-field">
                     <button type="button" class="qty-field__btn" aria-label="Минус">−</button>
                     <span class="qty-field__val">1</span>
                     <button type="button" class="qty-field__btn" aria-label="Плюс">+</button>
                     <input type="hidden" name="qty" value="1">
                   </div>
+
                  </div>
 
 
-                <div class="order-form__block">
-                <!-- Блок 5: Тип организации (6 компактных кнопок-таблеток) -->
-                <p class="order-form__heading">Тип организации</p>
-                <div class="order-form__cards">
-                  <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="ip" checked><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ИП</span></label>
-                  <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="ooo"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ООО</span></label>
-                  <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="zao"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ЗАО</span></label>
-                  <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="oao"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> ОАО</span></label>
-                  <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="med"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> Врачебная</span></label>
-                  <label class="pick-card pick-card--org"><input type="radio" name="org-type" value="other"><span class="pick-card__box pick-card__box--org"><span class="pick-card__org-ico" aria-hidden="true"></span> Другое</span></label>
-                </div>
-                </div>
+               <div class="order-form__block order-form__block--qty">
+  
+                  <!-- Заголовок блока -->
+                  <p class="order-form__heading order-form__heading--org ">Тип организации</p>
+                  
+                  <!-- Блок 5: Тип организации (6 компактных кнопок-таблеток) -->
+                  <div class="order-form__radios order-form__radios--pill">
+      
+                    <label class="radio-pill">
+                      <input type="radio" name="org-type" value="ip" checked>
+                      <span class="radio-pill__ui">
+                        <span class="radio-pill__ico" aria-hidden="true"></span>
+                        ИП
+                      </span>
+                    </label>
+                    
+                    <label class="radio-pill">
+                      <input type="radio" name="org-type" value="ooo">
+                      <span class="radio-pill__ui">
+                        <span class="radio-pill__ico" aria-hidden="true"></span>
+                        ООО
+                      </span>
+                    </label>
+                    
+                    <label class="radio-pill">
+                      <input type="radio" name="org-type" value="zao">
+                      <span class="radio-pill__ui">
+                        <span class="radio-pill__ico" aria-hidden="true"></span>
+                        ЗАО
+                      </span>
+                    </label>
+                    
+                    <label class="radio-pill">
+                      <input type="radio" name="org-type" value="oao">
+                      <span class="radio-pill__ui">
+                        <span class="radio-pill__ico" aria-hidden="true"></span>
+                        ОАО
+                      </span>
+                    </label>
+                    
+                    <label class="radio-pill">
+                      <input type="radio" name="org-type" value="med">
+                      <span class="radio-pill__ui">
+                        <span class="radio-pill__ico" aria-hidden="true"></span>
+                        Врачебная
+                      </span>
+                    </label>
+                    
+                    <label class="radio-pill">
+                      <input type="radio" name="org-type" value="other">
+                      <span class="radio-pill__ui">
+                        <span class="radio-pill__ico" aria-hidden="true"></span>
+                        Другое
+                      </span>
+                    </label>
+                    
+                  </div>
+                
+              </div>
 
+
+                
                 <!-- Блок 6: Реквизиты организации (CSS Grid сетка 2×2) -->
                 <div class="order-form__fields order-form__fields--quad">
                   <label class="field">
@@ -511,40 +562,193 @@
                     <span class="field__label">Город</span>
                     <input class="field__input" type="text" name="city" placeholder="Москва" autocomplete="address-level2">
                   </label>
-                  <label class="field">
-                    <span class="field__label">ОГРН</span>
-                    <input class="field__input" type="text" name="ogrn" placeholder="123456789876543" inputmode="numeric">
-                  </label>
-                  <label class="field">
-                    <span class="field__label">ИНН</span>
-                    <input class="field__input" type="text" name="inn" placeholder="12345678986765" inputmode="numeric">
-                  </label>
+                  <div class="ogrn-inn-row">
+    
+                      <label class="field">
+                        <span class="field__label">ОГРН</span>
+                        <input class="field__input" type="text" name="ogrn" placeholder="123456789876543">
+                      </label>
+                      
+                      <label class="field">
+                        <span class="field__label">ИНН</span>
+                        <input class="field__input" type="text" name="inn" placeholder="12345678986765">
+                      </label>
+                      
+                    </div>
                 </div>
 
-                <!-- Блок 7: Визуальный выбор макета (CSS Grid сетка 3×3) -->
-                <p class="order-form__heading">Выберите макет</p>
-                <div class="template-grid">
-                  <label class="template-item"><input type="radio" name="template" value="t1" checked><span class="template-item__visual"><img src="images/figma/tpl-1.png" alt=""></span><span class="template-item__cap">ИП 0001</span></label>
-                  <label class="template-item"><input type="radio" name="template" value="t2"><span class="template-item__visual"><img src="images/figma/tpl-2.png" alt=""></span><span class="template-item__cap">ИП 0002</span></label>
-                  <label class="template-item"><input type="radio" name="template" value="t3"><span class="template-item__visual"><img src="images/figma/tpl-3.png" alt=""></span><span class="template-item__cap">ИП 0003</span></label>
-                  <label class="template-item"><input type="radio" name="template" value="t4"><span class="template-item__visual"><img src="images/figma/tpl-4.png" alt=""></span><span class="template-item__cap">ИП 0004</span></label>
-                  <label class="template-item"><input type="radio" name="template" value="t5"><span class="template-item__visual"><img src="images/figma/tpl-5.png" alt=""></span><span class="template-item__cap">ИП 0005</span></label>
-                  <label class="template-item"><input type="radio" name="template" value="t6"><span class="template-item__visual"><img src="images/figma/tpl-6.png" alt=""></span><span class="template-item__cap">ИП 0006</span></label>
-                  <label class="template-item"><input type="radio" name="template" value="t7"><span class="template-item__visual"><img src="images/figma/tpl-7.png" alt=""></span><span class="template-item__cap">ИП 0007</span></label>
-                  <label class="template-item"><input type="radio" name="template" value="t8"><span class="template-item__visual"><img src="images/figma/tpl-8.png" alt=""></span><span class="template-item__cap">ИП 0008</span></label>
-                  <label class="template-item"><input type="radio" name="template" value="t9"><span class="template-item__visual"><img src="images/figma/tpl-9.png" alt=""></span><span class="template-item__cap">ИП 0009</span></label>
-                </div>
 
-                <!-- Блок 8: Выбор оснастки/корпуса (6 карточек) -->
-                <p class="order-form__heading">Выберите оснастку</p>
-                <div class="order-form__cards order-form__cards--mounts">
-                  <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="1" checked><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Ручная</span></span></label>
-                  <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="2"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Автомат</span></span></label>
-                  <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="3"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Карманная</span></span></label>
-                  <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="4"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">По оттиску</span></span></label>
-                  <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="5"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Корпусная</span></span></label>
-                  <label class="pick-card pick-card--mount"><input type="radio" name="mount" value="6"><span class="pick-card__box"><span class="mount-ph"><img src="img/re.png" alt=""></span><span class="pick-card__radio"></span><span class="pick-card__text">Для штампа</span></span></label>
-                </div>
+
+                        <!-- Блок 7: Визуальный выбор макета (CSS Grid сетка 3×3) -->
+                  <p class="order-form__heading">Выберите макет</p>
+                  <div class="template-grid">
+                        
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t1" checked>
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-1.png" alt="" width="148" height="148"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0001</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t2">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-2.png" alt="" width="148" height="148"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0002</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t3">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-3.png" alt="" width="150" height="150"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0003</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t4">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-4.png" alt="" width="150" height="150"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0004</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t5">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-5.png" alt="" width="150" height="150"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0005</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t6">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-6.png" alt="" width="150" height="150"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0006</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t7">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-7.png" alt="" width="150" height="150"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0007</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t8">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-8.png" alt="" width="150" height="150"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0008</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="pick-card">
+                          <input type="radio" name="template" value="t9">
+                          <span class="pick-card__box">
+                            <span class="pick-card__img-wrap"><img src="images/figma/tpl-9.png" alt="" width="150" height="150"></span>
+                            <span class="pick-card__footer">
+                              <span class="pick-card__radio"></span>
+                              <span class="pick-card__text">ИП 0009</span>
+                            </span>
+                          </span>
+                        </label>
+
+                       </div>
+
+
+
+                
+               <!-- Блок 8: Выбор оснастки/корпуса (6 карточек) -->
+<p class="order-form__heading">Выберите оснастку</p>
+<div class="order-form__cards order-form__cards--mounts">
+  
+  <label class="pick-card">
+    <input type="radio" name="mount" value="1" checked>
+    <span class="pick-card__box">
+      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+      <span class="pick-card__footer">
+        <span class="pick-card__radio"></span>
+        <span class="pick-card__text">Ручная</span>
+      </span>
+    </span>
+  </label>
+
+  <label class="pick-card">
+    <input type="radio" name="mount" value="2">
+    <span class="pick-card__box">
+      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+      <span class="pick-card__footer">
+        <span class="pick-card__radio"></span>
+        <span class="pick-card__text">Автомат</span>
+      </span>
+    </span>
+  </label>
+
+  <label class="pick-card">
+    <input type="radio" name="mount" value="3">
+    <span class="pick-card__box">
+      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+      <span class="pick-card__footer">
+        <span class="pick-card__radio"></span>
+        <span class="pick-card__text">Карманная</span>
+      </span>
+    </span>
+  </label>
+
+  <label class="pick-card">
+    <input type="radio" name="mount" value="4">
+    <span class="pick-card__box">
+      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+      <span class="pick-card__footer">
+        <span class="pick-card__radio"></span>
+        <span class="pick-card__text">По оттиску</span>
+      </span>
+    </span>
+  </label>
+
+  <label class="pick-card">
+    <input type="radio" name="mount" value="5">
+    <span class="pick-card__box">
+      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+      <span class="pick-card__footer">
+        <span class="pick-card__radio"></span>
+        <span class="pick-card__text">Для штампа</span>
+      </span>
+    </span>
+  </label>
+
+
+
+</div>
 
                 <!-- Блок 9: Способ получения заказа (pill-переключатели) -->
                 <p class="order-form__heading" id="delivery">Способ получения</p>
@@ -577,6 +781,8 @@
             </div>
           </section>
         </main>
+
+
 
   <footer class="footer" id="contacts">
     <div class="footer__deco" aria-hidden="true"><img src="images/figma/footer-deco.svg" alt=""></div>
