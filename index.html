@@ -688,119 +688,128 @@
 
                 
                <!-- Блок 8: Выбор оснастки/корпуса (6 карточек) -->
-<p class="order-form__heading">Выберите оснастку</p>
-<div class="order-form__cards order-form__cards--mounts">
-  
-  <label class="pick-card">
-    <input type="radio" name="mount" value="1" checked>
-    <span class="pick-card__box">
-      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
-      <span class="pick-card__footer">
-        <span class="pick-card__radio"></span>
-        <span class="pick-card__text">Ручная</span>
-      </span>
-    </span>
-  </label>
+          <p class="order-form__heading">Выберите оснастку</p>
+          <div class="order-form__cards--mounts">
+            
+            <label class="pick-card">
+              <input type="radio" name="mount" value="1" checked>
+              <span class="pick-card__box">
+                <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+                <span class="pick-card__footer">
+                  <span class="pick-card__radio"></span>
+                  <span class="pick-card__text">Ручная</span>
+                </span>
+              </span>
+            </label>
 
-  <label class="pick-card">
-    <input type="radio" name="mount" value="2">
-    <span class="pick-card__box">
-      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
-      <span class="pick-card__footer">
-        <span class="pick-card__radio"></span>
-        <span class="pick-card__text">Автомат</span>
-      </span>
-    </span>
-  </label>
+            <label class="pick-card">
+              <input type="radio" name="mount" value="2">
+              <span class="pick-card__box">
+                <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+                <span class="pick-card__footer">
+                  <span class="pick-card__radio"></span>
+                  <span class="pick-card__text">Автомат</span>
+                </span>
+              </span>
+            </label>
 
-  <label class="pick-card">
-    <input type="radio" name="mount" value="3">
-    <span class="pick-card__box">
-      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
-      <span class="pick-card__footer">
-        <span class="pick-card__radio"></span>
-        <span class="pick-card__text">Карманная</span>
-      </span>
-    </span>
-  </label>
+            <label class="pick-card">
+              <input type="radio" name="mount" value="3">
+              <span class="pick-card__box">
+                <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+                <span class="pick-card__footer">
+                  <span class="pick-card__radio"></span>
+                  <span class="pick-card__text">Карманная</span>
+                </span>
+              </span>
+            </label>
 
-  <label class="pick-card">
-    <input type="radio" name="mount" value="4">
-    <span class="pick-card__box">
-      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
-      <span class="pick-card__footer">
-        <span class="pick-card__radio"></span>
-        <span class="pick-card__text">По оттиску</span>
-      </span>
-    </span>
-  </label>
+            <label class="pick-card">
+              <input type="radio" name="mount" value="4">
+              <span class="pick-card__box">
+                <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+                <span class="pick-card__footer">
+                  <span class="pick-card__radio"></span>
+                  <span class="pick-card__text">По оттиску</span>
+                </span>
+              </span>
+            </label>
 
-  <label class="pick-card">
-    <input type="radio" name="mount" value="5">
-    <span class="pick-card__box">
-      <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
-      <span class="pick-card__footer">
-        <span class="pick-card__radio"></span>
-        <span class="pick-card__text">Для штампа</span>
-      </span>
-    </span>
-  </label>
+            <label class="pick-card">
+              <input type="radio" name="mount" value="5">
+              <span class="pick-card__box">
+                <span class="pick-card__img-wrap"><img src="img/re.png" alt="" width="129" height="128"></span>
+                <span class="pick-card__footer">
+                  <span class="pick-card__radio"></span>
+                  <span class="pick-card__text">Для штампа</span>
+                </span>
+              </span>
+            </label>
+          </div>
 
+                          <!-- Блок 9: Способ получения заказа (pill-переключатели) -->
+                          <p class="order-form__heading order-form__heading--delivery" id="delivery">Способ получения</p>
+                          <div class="order-form__radios--pill  order-form__radios--pill--gap">
+                            <label class="radio-pill"><input type="radio" name="delivery" value="pickup" checked><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> Самовывоз</span></label>
+                            <label class="radio-pill"><input type="radio" name="delivery" value="courier"><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> Доставка</span></label>
+                          </div>
 
+                          <!-- Блок 10: Адрес доставки (текстовое поле на всю ширину) -->
+                          <p class="order-form__heading order-form__heading--address">Адрес доставки</p>
+                          <label class="field field--full">
+                            <input class="field__input field__input--line" type="text" name="address" placeholder="Например, Панкратьевский переулок 41к1" autocomplete="address-line1">
+                          </label>
 
-</div>
+                          <!-- Блок 11: Комментарий (textarea, наложенная на декоративный SVG-фон) -->
+                       <p class="order-form__heading order-form__heading--comments">Комментарий</p>
+                      <div class="comment-box">
+                        <textarea class="comment-box__input" name="comment" placeholder="Если у вас есть уточнение к заказу, либо дополнительный заказ, напишите &#10;его сюда."></textarea>
+                      </div>
 
-                <!-- Блок 9: Способ получения заказа (pill-переключатели) -->
-                <p class="order-form__heading" id="delivery">Способ получения</p>
-                <div class="order-form__radios order-form__radios--pill">
-                  <label class="radio-pill"><input type="radio" name="delivery" value="pickup" checked><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> Самовывоз</span></label>
-                  <label class="radio-pill"><input type="radio" name="delivery" value="courier"><span class="radio-pill__ui"><span class="radio-pill__ico" aria-hidden="true"></span> Доставка</span></label>
-                </div>
-
-                <!-- Блок 10: Адрес доставки (текстовое поле на всю ширину) -->
-                <p class="order-form__heading">Адрес доставки</p>
-                <label class="field field--full">
-                  <input class="field__input field__input--line" type="text" name="address" placeholder="Например, Панкратьевский переулок 41к1" autocomplete="address-line1">
-                </label>
-
-                <!-- Блок 11: Комментарий (textarea, наложенная на декоративный SVG-фон) -->
-                <p class="order-form__heading">Комментарий</p>
-                <label class="field field--full">
-                  <span class="field__area-wrap">
-                    <img class="field__area-bg" src="images/figma/field-comment.svg" alt="">
-                    <textarea class="field__textarea" name="comment" rows="5" placeholder="Если у вас есть уточнение к заказу, либо дополнительный заказ, напишите его сюда."></textarea>
-                  </span>
-                </label>
-
-                <!-- Футер формы: кнопка подтверждения + юридическое примечание -->
-                <div class="order-form__footer">
-                  <button class="order-form__submit" type="submit">Оформить заказ</button>
-                  <p class="order-form__note">Оплата производится при получении заказа.</p>
-                </div>
-              </form>
-            </div>
-          </section>
-        </main>
+                          <!-- Футер формы: кнопка подтверждения + юридическое примечание -->
+                          <div class="order-form__footer">
+                            <button class="order-form__submit" type="submit">Оформить заказ</button>
+                            <p class="order-form__note">Оплата производится при получении заказа.</p>
+                          </div>
 
 
+                        </form>
+                      </div>
+                    </section>
+                  </main>
 
-  <footer class="footer" id="contacts">
-    <div class="footer__deco" aria-hidden="true"><img src="images/figma/footer-deco.svg" alt=""></div>
-    <div class="footer__inner">
-      <span id="opt" class="footer__opt-anchor"></span>
+
+        <footer class="footer" id="contacts">
+  <!-- Декор 1: верхняя картинка -->
+  <div class="footer__deco-top" aria-hidden="true">
+    <img src="images/figma/footer-deco1.png" alt="">
+  </div>
+
+  <!-- Контент: логотип + меню -->
+  <div class="footer__content">
+    <div class="footer__container">  <!-- 👈 НОВЫЙ КОНТЕЙНЕР -->
       <a class="footer__logo" href="#top">
-        <img src="img/pod.png" width="516" height="130" alt="На печать — изготовление печатей и штампов">
+        <img src="img/pod.png" width="516" height="130" alt="На печать">
       </a>
-      <nav class="footer__nav" aria-label="Навигация в подвале">
+
+      <nav class="footer__nav">
         <ul class="footer__menu">
-          <li><a class="footer__link" href="#prices">ЦЕНЫ</a></li>
-          <li><a class="footer__link" href="#order">СДЕЛАТЬ ЗАКАЗ</a></li>
-          <li><a class="footer__link" href="#delivery">ДОСТАВКА</a></li>
-          <li><a class="footer__link" href="#contacts">КОНТАКТЫ</a></li>
-          <li><a class="footer__link" href="#opt">ОПТОВАЯ ПРОДАЖА</a></li>
+          <li ><a  href="#prices">ЦЕНЫ</a></li>
+          <li><a  href="#order">СДЕЛАТЬ ЗАКАЗ</a></li>
+          <li><a href="#delivery">ДОСТАВКА</a></li>
+          <li><a href="#contacts">КОНТАКТЫ</a></li>
+          <li><a href="#opt">ОПТОВАЯ ПРОДАЖА</a></li>
         </ul>
       </nav>
     </div>
-  </footer>
+  </div>
+
+  <!-- Декор 2: волна снизу -->
+  <div class="footer__deco-bottom" aria-hidden="true">
+    <img src="images/figma/footer-deco.png" alt="">
+  </div>
+</footer>
+
+
 </body>
 </html>

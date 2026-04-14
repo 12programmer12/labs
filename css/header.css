@@ -1,12 +1,12 @@
 .header {
   min-height: 177px;  /* или любое другое значение */
-  background: var(--white);
+  background: #fff;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
 }
 .header__inner {
-  max-width: var(--container);
+  max-width: 90rem;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 10.27vw, var(--header-pad-x));
+  padding: 0 clamp(1rem, 10.27vw, 9.2425rem);
 }
 
 .header__top {
@@ -22,14 +22,14 @@
 
 .header__logo {
   display: block;
-  width: var(--header-logo-w);
-  height: var(--header-logo-h);
+  width: 18.44375rem;
+  height: 7.1125rem;
   flex-shrink: 0;
 }
 
 .header__logo img {
-  width: var(--header-logo-w);
-  height: var(--header-logo-h);
+  width: 18.44375rem;
+  height: 7.1125rem;
   object-fit: contain;
 }
 
@@ -39,7 +39,7 @@
  align-items: flex-start;
   
   justify-content: flex-end;
-  gap: var(--header-call-gap);
+  gap: 4.66125rem;
   flex-shrink: 1;           /* разрешаем сжатие */
   margin-top: 0.657rem;
   margin-left: auto;        /* вместо фиксированного 414.3px */
@@ -55,7 +55,7 @@
   align-items: flex-end;
   gap: 11.52px;
   width: 100%;
-  max-width: var(--header-phone-w);
+  max-width: 18.040125rem;
   flex-shrink: 0;
    
 }
@@ -67,7 +67,7 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0.35rem;
-  width: var(--header-metro-line-max);
+  width: 15.16875rem;
   max-width: 100%;
   box-sizing: border-box;
   margin-left: 2.44rem; 
@@ -84,7 +84,7 @@
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
-  color: var(--metro-text);
+  color: #000;
 }
 
 .header__map {
@@ -95,7 +95,7 @@
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
-  color: var(--map-link);
+  color: #737373;
   background: #f3f3f3;
   border-radius: 5px;
    position: relative;
@@ -106,7 +106,7 @@
 .header__phone {
   display: block;
   width: 100%;
-  max-width: var(--header-phone-w);
+  max-width: 18.040125rem;
   box-sizing: border-box;
   font-size: 2rem;
   font-weight: 400;
@@ -121,8 +121,8 @@
 
  .header__call-ico {
   display: block;
-  width: var(--header-phone-ico);
-  height: var(--header-phone-ico);
+  width: 3.09225rem;
+  height: 3.09225rem;
   flex-shrink: 0;
    
 }
@@ -138,8 +138,8 @@
 .header__nav {
   padding: 0;
   margin-left: 33px;
-  width: calc(100% - var(--header-nav-offset));
-  max-width: var(--header-nav-width);
+  width: calc(100% - 0.84rem);
+  max-width: 60rem;
   box-sizing: border-box;
 }
 
@@ -150,7 +150,7 @@
   justify-content: flex-start;
   height: 42px;
   width: 100%;
-  max-width: var(--header-nav-width);
+  max-width: 60rem;
   margin: 0;
   margin-top: -12.4px;
   padding: 0;
@@ -168,7 +168,7 @@
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
-  color: var(--muted-nav);
+  color: #8f8f8f;
 }
 
 .header__link--active {
@@ -183,11 +183,9 @@
   bottom: -0.35rem;
   width: 79%;
   height: 2px;
-  background: var(--nav-line);
+  background: #0068c7;
 }
 
 .header__link:hover {
-  color: var(--heading);
+  color: #0d386b;
 }
-
-

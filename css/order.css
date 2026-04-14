@@ -4,7 +4,7 @@
   padding-bottom: 4rem;
   max-width: 100%;
   overflow-x: hidden;
-  background: var(--bg-page);
+  background: #ebeff2;
 }
 
 /* Заголовок секции */
@@ -35,9 +35,9 @@
   position: sticky;
   top: 1rem;
   padding: 1.5rem 1rem 1.25rem;
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
+  background: #fff;
+  border-radius: 11px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
 }
 
 .order-summary__label {
@@ -51,7 +51,7 @@
   margin: 0 0 15px;
   font-size: 1.125rem;
   line-height: 1.25;
-  color: var(--muted);
+  color: #636363;
 }
 
 .order-summary__label--total {
@@ -66,7 +66,7 @@
   font-weight: 400;
   line-height: 1;
   text-align: center;
-  color: var(--summary-orange);
+  color: #ff8a00;
 }
 
 .order-summary__qty-wrap {
@@ -83,12 +83,12 @@
   padding: 0;
   font-size: 0.875rem;
   line-height: 1;
-  color: var(--muted);
+  color: #636363;
   cursor: pointer;
   background: #edefef;
   border: none;
   border-radius: 4px;
-  transition: background-color var(--transition);
+  transition: background-color 0.25s ease;
 }
 
 .order-summary__step:hover {
@@ -100,17 +100,17 @@
   flex: 1 1 0%;
   min-width: 0;
   max-width: 840px;
-  padding: 35.25px 69.86px 2.5rem 53px;
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
+  padding: 35.25px 69.86px 63px 53px;
+  background: #fff;
+  border-radius: 11px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
 }
 
 .order-form__heading {
   margin: 2rem 0 4px;
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--muted);
+  color: #636363;
 }
 
 .order-form__heading:first-child {
@@ -235,7 +235,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 11px 13px;
   justify-content: center;
-  margin-bottom: 2rem; /* или ваше исходное значение */
+  margin-bottom: 88px; /* или ваше исходное значение */
 }
 
 /* Адаптируем внутренние карточки под ячейки грида */
@@ -283,6 +283,13 @@
   width: 100%;
 }
 
+.order-form__radios--pill--gap{
+
+gap: 29px;
+
+
+}
+
 .radio-pill {
   cursor: pointer;
 }
@@ -302,12 +309,12 @@
   padding: 11px 12px;
   height: 45px;
   font-size: 1.125rem;
-  color: var(--text);
-  background: var(--pill-bg);
+  color: #1b1b1b;
+  background: #f8f8f8;
   border-radius: 8px;
   white-space: nowrap;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: box-shadow var(--transition);
+  transition: box-shadow 0.25s ease;
 }
 
 .radio-pill input:checked + .radio-pill__ui {
@@ -321,7 +328,7 @@
   align-items: center;
   gap: 1.4rem;
   padding: 11px 15px;
-  background: var(--pill-bg);
+  background: #f8f8f8;
   border-radius: 8px;
   height: 45px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
@@ -388,7 +395,7 @@
 .field__label {
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--muted);
+  color: #636363;
 }
 
 .ogrn-inn-row {
@@ -413,11 +420,11 @@
   height: 2.75rem;
   padding: 0 22px;
   font-size: 1.145rem;
-  color: var(--text);
+  color: #1b1b1b;
   background: #f8f8f8;
   border: none;
   border-radius: 8px;
-  transition: box-shadow var(--transition);
+  transition: box-shadow 0.25s ease;
 }
 
 .field__input::placeholder {
@@ -434,17 +441,36 @@
   background: #f8f8f8;
 }
 
-.field__area-wrap {
-  position: relative;
-  display: block;
-  width: 100%;
+
+/* Серый контейнер-подложка */
+.comment-box {
+  width: 700px;
+  height: 150px;
+  background-color: #FCFCFC;
+  border-radius: 8px; /* Если в макете есть скругление */
+  padding-top: 8px;   /* 👈 Настройте под макет */
+  padding-left: 20px;  /* 👈 Настройте под макет */
+   border: 1px solid #D0D0D0; 
+  border-color: #D0D0D0; /* Чтобы padding не увеличивал итоговый размер 700×150 */
+  
 }
 
-.field__area-bg {
-  display: block;
+/* Поле ввода внутри */
+.comment-box__input {
   width: 100%;
-  height: auto;
-  pointer-events: none;
+  height: 100%;
+  background: transparent;
+  border: none;
+  resize: none; /* Фиксирует размер, чтобы не ломать вёрстку. Замените на vertical, если нужно растягивать */
+  font-family: inherit;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: #333;
+  outline: none;
+}
+
+.comment-box__input::placeholder {
+  color: rgba(0, 0, 0, 0.35); /* Цвет плейсхолдера */
 }
 
 .field__textarea {
@@ -454,8 +480,8 @@
   width: 92%;
   height: 80%;
   padding: 0.5rem;
-  font: 400 1.125rem var(--font);
-  color: var(--text);
+  font: 400 1.125rem "Roboto", system-ui, sans-serif;
+  color: #1b1b1b;
   resize: vertical;
   background: transparent;
   border: none;
@@ -504,33 +530,70 @@
   margin: 0 0 20px 0;
 }
 
-/* ====================== ФУТЕР ФОРМЫ ====================== */
+.order-form__heading--delivery {
+  margin-bottom: 23px; /* <-- Укажите здесь нужное вам значение */
+}
+
+.order-form__heading--address{
+
+margin-top: 41px;
+margin-bottom: 10px;
+}
+.order-form__heading--comments{
+
+margin-top: 45px;
+margin-bottom: 13px;
+
+}
+
+.order-form__heading--delivery {
+  margin-bottom: 23px; 
+}
+
+.order-form__heading--address {
+  margin-top: 41px;
+  margin-bottom: 10px;
+}
+
+.order-form__heading--comments {
+  margin-top: 45px;
+  margin-bottom: 13px;
+}
+
+
+
+
+
+/* ====================== ФУТЕР ФОРМЫ (Кнопка "Оформить заказ") ====================== */
 .order-form__footer {
+   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem 2rem;
-  margin-top: 2rem;
-  padding-left: 53px;
+  gap: 1px 28px;
+  margin-top: 34px;
+  
+  padding-left: 1px;
 }
 
 .order-form__submit {
+  height: 44px;  
   min-width: 13.25rem;
   padding: 0.65rem 1.5rem;
-  font-family: var(--font);
+  font-family: "Roboto", system-ui, sans-serif;
   font-size: 1.125rem;
   font-weight: 900;
   line-height: 1;
   color: #fff;
   cursor: pointer;
-  background: var(--green-submit);
+  background: #00d23b;
   border: none;
   border-radius: 2px;
-  transition: background-color var(--transition), transform var(--transition);
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .order-form__submit:hover {
-  background: var(--green-hover);
+  background: #00b833;
   transform: translateY(-1px);
 }
 
@@ -540,4 +603,126 @@
   font-size: 1.125rem;
   color: #898989;
   text-align: center;
+}
+
+/* ====================== САЙТ-ФУТЕР (С декором и волной) ====================== */
+.footer {
+  position: relative;
+  margin-top: 232px;
+  padding-bottom: 37px;
+  overflow: visible;
+  width: 100%;
+}
+
+/* Верхний декор */
+.footer__deco-top {
+  position: absolute;
+  bottom: 236px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+  line-height: 0;
+}
+
+/* Нижняя волна */
+.footer__deco-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.footer__deco-top img,
+.footer__deco-bottom img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Контент поверх декора */
+.footer__content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* 👆 Здесь НЕ добавляем padding, он будет у контейнера */
+}
+
+/* НОВЫЙ КОНТЕЙНЕР - через него управляете отступами */
+.footer__container {
+  padding-left: 53px;    /* 👈 ЗДЕСЬ задаёте отступ слева для логотипа и меню */
+  padding-top: 60px;     /* 👈 Отступ сверху */
+  padding-bottom: 38px;  /* 👈 Отступ снизу */
+  padding-right: 20px;   /* 👈 При необходимости */
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение: логотип сверху, меню снизу */
+}
+
+/* Логотип */
+.footer__logo {
+  display: block;
+  width: 100%;
+  max-width: 516px;
+  height: auto;
+  margin-bottom: 13px;   /* 👈 Отступ от логотипа до меню (можно регулировать) */
+}
+
+.footer__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Навигация */
+.footer__nav {
+  width: 100%;
+  
+}
+
+.footer__menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 106px;             /* 👈 Расстояние между пунктами меню */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 112px; 
+}
+
+.footer__menu a {
+  color: #8f8f8f; /* Серый по умолчанию, как в шапке */
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.footer__menu a:hover,
+.footer__menu a:focus {
+  color: #000; /* Чёрный при наведении (можно заменить на var(--heading) для синего) */
+}
+/* Адаптив */
+@media (max-width: 768px) {
+  .footer__container {
+    padding-left: 20px;   /* Меньше отступ слева на мобилках */
+    padding-right: 20px;
+  }
+  
+  .footer__menu {
+    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание по левому краю */
+    
+  }
+  
+  .footer__menu a {
+    white-space: normal;
+  }
+  
+ 
 }
