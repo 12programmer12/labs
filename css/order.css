@@ -277,18 +277,18 @@
 .order-form__radios--pill {
   display: flex;
   flex-wrap: nowrap;
-  gap: 14px;
+  gap: 15px;
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
 .order-form__radios--pill--gap{
-
 gap: 29px;
-
-
 }
+
+
+
 
 .radio-pill {
   cursor: pointer;

@@ -1,40 +1,4 @@
-:root {
-  --bg-page: #ebeff2;
-  --white: #fff;
-  --heading: #0d386b;
-  --text: #1b1b1b;
-  --muted: #636363;
-  --muted-nav: #8f8f8f;
-  --metro-text: #000;
-  --map-link: #737373;
-  --price-orange: #ff640d;
-  --summary-orange: #ff8a00;
-  --label-soft: #5c7c8d;
-  --line-blue: #b7cfdc;
-  --green-quick: #00c838;
-  --green-submit: #00d23b;
-  --green-hover: #00b833;
-  --pill-bg: #f8f8f8;
-  --shadow-card: 0 4px 18px rgba(0, 0, 0, 0.04);
-  --shadow-popular: 0 4px 7px rgba(0, 0, 0, 0.2);
-  --shadow-pick: 0 3px 8px rgba(0, 0, 0, 0.07);
-  --nav-line: #0068c7;
-  --font: "Roboto", system-ui, sans-serif;
-  --container: 90rem;
-  --radius: 11px;
-  --transition: 0.25s ease;
-  --header-pad-x: 9.2425rem;
-  --header-nav-offset: 0.84rem;
-  --header-nav-width: 60rem;
-  --header-logo-w: 18.44375rem;
-  --header-logo-h: 7.1125rem;
-  --header-metro-line-max: 15.16875rem;
-  --header-phone-w: 18.040125rem;
-  --header-phone-ico: 3.09225rem;
-  --header-call-gap: 4.66125rem;
-  --header-metro-phone-gap: 0.826875rem;
-}
-
+/* ====================== БАЗОВЫЕ НАСТРОЙКИ ====================== */
 html {
   font-size: 100%; 
   box-sizing: border-box;
@@ -50,11 +14,11 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font);
-  color: var(--text);
+  font-family: "Roboto", system-ui, sans-serif;
+  color: #1b1b1b;
   line-height: 1.35;
   letter-spacing: 0;
-  background: var(--bg-page);
+  background: #ebeff2;
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
@@ -73,37 +37,16 @@ img {
 }
 
 a {
-  color: var(--heading);
+  color: #0d386b;
   text-decoration: none;
-  transition: color var(--transition), opacity var(--transition), background-color var(--transition);
+  transition: color 0.25s ease, opacity 0.25s ease, background-color 0.25s ease;
 }
 
 a:hover {
   opacity: 0.88;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ====================== АДАПТИВ: ПЛАНШЕТЫ (до 1024px) ====================== */
 @media (max-width: 64rem) {
   .hero__inner {
     grid-template-columns: 1fr;
@@ -133,11 +76,11 @@ a:hover {
     max-width: 28rem;
     min-height: 22rem;
   }
-
- 
 }
 
+/* ====================== АДАПТИВ: МОБИЛЬНЫЕ (до 768px) ====================== */
 @media (max-width: 48rem) {
+  /* Шапка */
   .header__top {
     flex-direction: column;
     align-items: center;
@@ -188,18 +131,19 @@ a:hover {
     bottom: -0.25rem;
   }
 
+  /* Футер */
   .footer__inner {
     align-items: center;
     padding-left: clamp(1rem, 6vw, 9.25rem);
     padding-right: clamp(1rem, 6vw, 9.25rem);
   }
 
- 
-
+  /* Цены */
   .price-card__sep {
     display: none;
   }
 
+  /* Популярные товары */
   .popular__grid {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -227,6 +171,7 @@ a:hover {
     min-height: 16rem;
   }
 
+  /* Форма заказа */
   .order__layout {
     flex-direction: column;
   }
@@ -268,6 +213,7 @@ a:hover {
   }
 }
 
+/* ====================== АДАПТИВ: МАЛЕНЬКИЕ ЭКРАНЫ (до 320px) ====================== */
 @media (max-width: 20rem) {
   html {
     font-size: 93.75%;
